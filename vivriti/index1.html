@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+   <head>
+      <script src = "js/lib/angular.min.js"></script>
+      <script src = "js/controller/problem1Controller.js"></script>
+      <script src = "js/service/problem1Service.js"></script>
+      <link rel="stylesheet" href="style/problem1Style.css">
+   </head>
+   
+   <body ng-app = "myapp">
+      <div ng-controller = "problem1Controller" >
+         <div class="loanContainer">
+         <h2>Select the PSL classification for the given industry type, loan purpose attributes</h2>
+            <table id="loanInfo">
+               <thead>
+                  <tr>
+                     <th>Loan Purpose</th>
+                     <th>Industry Type</th>
+                     <th>PSL</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr ng-repeat="item in uniqueList">
+                     <td>{{item.loanPurpose}}</td>
+                     <td>{{item.industryType}}</td>
+                     <td><input type="text" name="PSL{{item.loanPurpose.loanNumber}}"></td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      </div>
+      
+      <script>
+         var app = angular.module("myapp", []);
+         app.controller("problem1Controller", problem1Controller);
+         app.service("problem1Service", problem1Service);
+      </script>
+      
+   </body>
+</html>

@@ -1,0 +1,48 @@
+fieldset {
+    font-family: sans-serif;
+    border: 1px solid #f0f0f0;
+    border-radius: 5px;
+    padding: 15px 0 15px 0;
+    width: 215px;
+    float: left;
+}
+
+fieldset legend {
+    background: #f7d3dc;
+    color: #d6003a;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 90%;
+}
+
+
+fieldset input {
+    float: right;
+    width: 50px;
+}
+
+fieldset label {
+    width: 70%;
+    display: inline-block;
+    text-align: center;
+}
+
+fieldset div {
+   display: flex;
+   margin-top: 5px;
+}
+
+.container{
+    margin-top: 25px;
+}
+
+.content{
+    width: 90%;
+    margin-top: 25px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.header input{
+    margin-left: 15px;
+}

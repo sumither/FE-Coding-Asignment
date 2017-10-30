@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+   <head>
+      <script src = "js/lib/angular.min.js"></script>
+      <script src = "js/controller/problem2Controller.js"></script>
+      <script src = "js/directive/problem2Directive.js"></script>
+      <link rel="stylesheet" href="style/problem2Style.css">
+   </head>
+   
+   <body ng-app = "myapp">
+      <div ng-controller = "problem2Controller" >
+         <div class="content">
+            <div class="header">Number of investors<input type="text" limit-integer="4" min-value="0" ng-model="investors"></div>
+            <div ng-if="investors" class="container">
+               <fieldset ng-repeat="n in getInvestorCount(investors)">
+                  <legend>A{{n+1}}</legend>
+                  <div><label>Percent</label> <input ng-model="investorPercentage[n]" limit-integer="101" min-value="-1" percentage="true" pindex="{{n}}" type="text"></div>
+                  <div><label>Yield</label> <input limit-integer="101" min-value="-1" yeild="true" type="text"></div>
+                  <div><label>Interest Priority</label> <input ng-model="priorityIndex[n]" limit-integer="9" min-value="1" priority="true" ng-disabled="n==0" type="text" value="{{n==0?1:''}}"></div>
+                  <div><label>Principal Priority</label> <input ng-model="priorityIndex[n+10]" limit-integer="9" min-value="1" priority="true" type="text"></div>
+               </fieldset>
+            </div>
+         </div>
+      </div>
+      
+      <script>
+         var app = angular.module("myapp", []);
+         app.controller("problem2Controller", problem2Controller);
+         app.directive("limitInteger", limitInteger);
+      </script>
+      
+   </body>
+</html>

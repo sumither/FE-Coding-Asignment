@@ -1,0 +1,35 @@
+.loanContainer{
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#loanInfo {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#loanInfo td, #loanInfo th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#loanInfo tr:nth-child(even){background-color: #f2f2f2;}
+
+#loanInfo tr:hover {background-color: #ddd;}
+
+#loanInfo th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+#loanInfo th:last-child, #loanInfo td:last-child{
+    text-align: center;
+    background-color: #FFF;
+    color: #000;
+    border: 0;
+}
